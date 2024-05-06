@@ -3,6 +3,7 @@ import 'package:extended_nested_scroll_view/extended_nested_scroll_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nil/nil.dart';
 
 import '../step_1/view.dart';
 import 'providers.dart';
@@ -23,15 +24,43 @@ class StepTwo extends StatelessWidget {
         builder: (context, ref, child) {
           final control = ref.read(getScrollControllerProvider);
           return ExtendedNestedScrollView(
-              // controller: control,
+              controller: control,
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) {
                 // These are the slivers that show up in the "outer" scroll view.
                 return <Widget>[
-                  const SliverToBoxAdapter(
-                    child: Icon(
-                      Icons.safety_divider,
-                      size: 20,
+                  SliverToBoxAdapter(
+                    child: SizedBox(
+                      height: 200,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: const [
+                          ColoredBox(
+                            color: Colors.red,
+                            child: SizedBox(
+                              width: 120,
+                            ),
+                          ),
+                          ColoredBox(
+                            color: Colors.blue,
+                            child: SizedBox(
+                              width: 120,
+                            ),
+                          ),
+                          ColoredBox(
+                            color: Colors.green,
+                            child: SizedBox(
+                              width: 120,
+                            ),
+                          ),
+                          ColoredBox(
+                            color: Colors.yellow,
+                            child: SizedBox(
+                              width: 120,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ];
