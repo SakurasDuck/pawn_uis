@@ -1,0 +1,1 @@
+agen -o ./lib/assets  --no-watch --folder-ignore videos

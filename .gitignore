@@ -50,3 +50,8 @@ app.*.map.json
 /macos/
 /web/
 *.lock
+e:\lib/assets\assets.preview.dart
+e:\lib/assets/assets.preview.dart
+\lib\assets.preview.dart
+\./lib/assets\assets.preview.dart
+\./assets.preview.dart

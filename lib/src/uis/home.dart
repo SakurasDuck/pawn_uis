@@ -22,6 +22,12 @@ class HomeView extends StatelessWidget {
               AutoRouter.of(context).push(const Example_1());
             },
           ),
+          ListTile(
+            title: const Text('custom sliver'),
+            onTap: () {
+              AutoRouter.of(context).push(const Custom_sliver());
+            },
+          ),
         ],
       ),
     );

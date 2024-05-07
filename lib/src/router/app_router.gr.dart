@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    Custom_sliver.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CustomSliverView(),
+      );
+    },
     Example_1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -40,6 +46,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [CustomSliverView]
+class Custom_sliver extends PageRouteInfo<void> {
+  const Custom_sliver({List<PageRouteInfo>? children})
+      : super(
+          Custom_sliver.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Custom_sliver';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
